@@ -1,4 +1,4 @@
-package go_simpleyaml
+package simpleyaml
 
 import (
 	"github.com/go-yaml/yaml"
