@@ -88,5 +88,7 @@ func TestSimpleYaml(t *testing.T) {
 	yml := NewYaml(network)
 	d, _ = yml.Dumps()
 	fmt.Println(string(d))
+
+	yml.Dump("test.yml")
 }
 

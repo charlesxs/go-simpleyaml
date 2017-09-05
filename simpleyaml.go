@@ -8,6 +8,7 @@ import (
 	"bufio"
 	"io"
 	"errors"
+	"io/ioutil"
 )
 
 
@@ -69,6 +70,15 @@ func (y *Yaml) Load(filename string) error {
 // dump yaml to string
 func (y *Yaml) Dumps() ([]byte, error)  {
 	return yaml.Marshal(y.data)
+}
+
+// dump yaml to file
+func (y *Yaml) Dump(filename string) error {
+	data, err := yaml.Marshal(y.data)
+	if err != nil {
+		return err
+	}
+	return ioutil.WriteFile(filename, data, 0644)
 }
 
 
