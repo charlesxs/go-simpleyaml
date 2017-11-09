@@ -1,4 +1,4 @@
-## SimpleYml ##
+## SimpleYaml ##
 
 **类似于simplejson, 方便快捷的访问、修改 yaml 以及转换go对象 到 yaml**
 
